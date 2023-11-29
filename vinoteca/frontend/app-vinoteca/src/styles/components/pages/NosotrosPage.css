@@ -1,0 +1,131 @@
+.info-sobre-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d7005a0c;
+    margin-top: 65px;
+  }
+  main .info-sobre-nosotros h2{
+      color: rgb(74, 1, 36);
+      font-weight:300;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-decoration: overline;
+      font-size: 35px;
+      text-align: center;
+  }
+
+  .info-sobre-nosotros p{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .personal{
+    background-color: #d7005a0c;
+    padding-top: 2rem;
+    text-align: center;
+    
+  }
+  main .personal h2{
+      color: rgb(74, 1, 36);
+      font-weight: 700;
+  }
+  .contenedor-svg-about{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 76px;
+    background-color: #d7005a0c;
+    flex-wrap: wrap;
+  }
+  /* .contenedor-svg-about img{
+    width: 280px;
+  } */
+  .contenedor-svg-about .svg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+  }
+  .contenedor-svg-about .svg p{
+    text-align: center;
+  }
+  .contenedor-svg-about .svg h3{
+    text-align: center;
+  }
+  /* carta */
+  .contenedor-de-carta{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  .container {
+        margin: auto;
+      font-family: "Poppins", Arial, san-serif;
+      line-height: 1.4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+    }
+    
+    .card-presentacion {
+      background: #fff url("https://tse2.mm.bing.net/th?id=OIP.Ao90l3qNmFapohX6wd3_lAHaEo&pid=Api&P=0&h=180") top -10% center no-repeat;
+      background-size: contain;
+      border-radius: 10px;
+      box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 30px 60px;
+      max-width: 150px;
+      height: 27rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:flex-start;
+    }
+    .card-presentacion img {
+      background-color: #dddfe6;
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      display: block;
+    }
+    .card-presentacion h1 {
+      font-size: 22px;
+      margin: 10px auto 0;
+      letter-spacing: 1px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .card-presentacion h2 {
+
+      color: #b1b6c6;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    .card-presentacion .button {
+      display: block;
+      text-decoration: none;
+      background: #3b6efc00;
+      color: #000000;
+      padding: 4px;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 100px;
+      transition: 0.2s;
+    }
+
+    .TextoPrecentacion{
+      text-align: center;
+      width: 200px;
+      margin: 0px !important;
+
+      
+    }
+    /* fjkjfjifjiefji */

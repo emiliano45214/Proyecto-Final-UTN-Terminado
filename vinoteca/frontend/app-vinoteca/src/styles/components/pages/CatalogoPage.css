@@ -1,0 +1,372 @@
+.catalogo-de-productos img{
+    width: 15rem;
+  }
+  .catalogo-de-productos .div-hover{
+    background: url(https://http2.mlstatic.com/botella-de-vino-tinto-argentino-malbec-D_NQ_NP_987877-MPE27113824275_042018-F.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .catalogo-de-productos .div-hover:hover{
+    background: url(../../../imagenes/imagen-de-vinos.jpg);
+  }
+  .catalogo-de-productos{
+    display: flex;
+    gap: 20px;
+  }
+
+
+
+  /* carta catalogo */
+
+
+
+
+  img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width:180px;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 200px;
+    background-color: rgba(51, 0, 25, 0.738);
+  }
+  
+  .card_content {
+    padding: 1rem;
+    
+    min-height: 200px;
+  }
+
+  .card_image{
+    min-height: 200px;
+
+  }
+  .card_image img{
+    min-height: 200px;
+  }
+  
+  .card_title {
+    color: #ffffff;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 7px;
+  }
+  .card_title p{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 19px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0px;
+    font-weight: 400;
+  }
+  .card_text p{
+    color: rgb(221, 148, 135);
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .made_by {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+  }
+  
+
+
+
+  /* carta catalogo */
+
+.columnas-catalogo{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    margin-top: 40px;
+    min-height: 500px;
+}
+.filtros-section{
+    width: 35%;
+    margin-left: 10px;
+}
+.section-cards-vinos{
+    width: 65%;
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+/* acordion */
+.filtros-section input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+.tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tab {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: rgba(74, 1, 36, 0.744);
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+  }
+  .tab-label:hover {
+    background: rgba(74, 1, 36, 0.577);
+  }
+  .tab-label::after {
+    content: "❯";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: rgba(74, 1, 36, 0.744);
+    background: white;
+    transition: all 0.35s;
+  }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: rgba(74, 1, 36, 0.744);
+    cursor: pointer;
+  }
+  .tab-close:hover {
+    background: rgba(74, 1, 36, 0.744);
+  }
+  
+  input:checked + .tab-label {
+    background: rgba(74, 1, 36, 0.744);
+  }
+  input:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+  .contido-de-acordeon{
+    display: flex;
+    flex-direction: column;
+  }
+  .contido-de-acordeon a{
+    color: #69141f;
+    text-decoration: none;
+    font-size: 19px;
+    margin-top: 5px;
+  }
+  .contido-de-acordeon input{
+    position: static;
+    opacity: 1;
+    z-index: 1;
+  }
+  .contido-de-acordeon label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #buscador{
+    position: static;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 4px;
+    background-color: #d4cacc;
+    border: 1px solid rgba(74, 1, 36, 0.744);
+  }
+  .titulo-buscador{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .titulo-buscador input{
+    width: 60%;
+    height: 25px;
+  }
+  .titulo-buscador h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+  }
+  .titulo-buscador h2{
+    align-self: self-start;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-decoration: overline;
+  }
+  main img{
+    margin-top: 0px;
+  }
+/* buscadoorrrr */
+  .filtro1{
+    display: none;
+  }
+  .container1 {
+    display: block;
+    max-width: 900px;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    outline: none;
+  }
+  
+  .search-container {
+    overflow: hidden;
+    float: right;
+    height: 4em;
+    width: 4em;
+    border-radius: 2em;
+    box-shadow: 0 0 5px rgba(74, 1, 36, 0.744);
+    -moz-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+  }
+  .search-container:hover, .search-container:focus, .search-container:focus-within {
+    width: 23em;
+    border-radius: 5px 2em 2em 5px;
+    outline: none;
+  }
+  .search-container:hover .input1, .search-container:focus .input1, .search-container:focus-within .input1 {
+    display: inline-block;
+    width: 19em;
+    padding: 5px;
+  }
+  
+  .input1 {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    float: left;
+    width: 0em;
+    height: 2em;
+    margin: 1em;
+    margin-right: -4.5em;
+    background: #fff;
+    color: rgba(74, 1, 36, 0.744);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+  }
+  .input1:focus {
+    outline: none;
+    box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 1.75em;
+    height: 1.75em;
+    margin: 0.125em;
+    background: rgb(74, 1, 36);
+    text-align: center;
+    font-size: 2em;
+    color: #FDF6E3;
+    border-radius: 50%;
+    box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.3);
+  }
+  .button1:active {
+    border: 0 !important;
+    text-shadow: 0 0 0;
+  }
+  .button1 i {
+    font-size: 85%;
+  }
+  /* buscadooorrr */

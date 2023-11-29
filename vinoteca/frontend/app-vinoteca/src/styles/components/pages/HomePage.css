@@ -1,0 +1,22 @@
+main img{
+    width: 100%;
+    margin-top: 20px;
+}
+.columnas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.bienvenida{
+    width: 65%;
+    padding: 20px;
+}
+.artesanias{
+    width: 35%;
+    background-color: rgb(74, 1, 36);
+    padding: 15px;
+    color: #dddfe6;
+}
+.imgHome{
+    margin-top: 50px;
+}

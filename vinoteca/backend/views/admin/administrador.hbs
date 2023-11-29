@@ -1,0 +1,108 @@
+<div class="nav">
+    <h1>¡Hola {{persona}}! </h1>
+    {{!-- buscador --}}
+    <div class='container1' tabindex='1'>
+      <div class='search-container' tabindex='1'>
+        <input class="input" placeholder='Buscardor' id="buscador" type='text'>
+        <a class='button'>
+          <i class='fa fa-search'></i>
+        </a>
+      </div>
+    </div>
+    {{!-- buscador --}}
+    <div class="cont-Botones">
+        <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesion</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap">¡Agregar un nuevo producto!</button>
+    </div>
+</div>
+<div class="padre-tabla">
+    <div class="tabla">
+        {{#each catalogoVinos}}
+        <div class="div-padreCard">
+            <div class="imgCard">
+                {{{imagen}}}
+            </div>
+            <div class="ContenidoCard">
+                <h3>Id: {{id}}</h3>
+                <h3>Nombre: {{nombre}}</h3>
+                <h3>Marca: {{marca}}</h3>
+                <h3>Clasificacion: {{clasificacion}}</h3>
+                <h3>Precio: ${{precio}}</h3>
+            </div>
+            <div class="iconos">
+                <a  href="/admin/administrador/modificar/{{id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="/admin/administrador/eliminar/{{id}}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+{{!-- modal --}}
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="exampleModalLabel">¡Nuevo Producto!</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/admin/administrador" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Marca:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="marca">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Clasificacion:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="clasificacion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Precio:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="precio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Imagen:</label>
+                        <input type="file" class="form-control" id="recipient-name" name="imagen">
+                    </div>
+
+                    <button type="submit" id="botonAgregarProducto" class="btn btn-primary" style="background-color: rgb(74, 1, 36);border:none;">Guardar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- modal --}}
+{{!-- modal para confirmar si queremos eliminar el producto --}}
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+<script>
+    document.addEventListener('keyup', e=>{
+        if(e.target.matches("#buscador")){
+            document.querySelectorAll(".div-padreCard").forEach(letra =>{
+                letra.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?letra.classList.remove("filtro")
+                :letra.classList.add("filtro")
+            })
+        }
+    })
+</script>
+
+
+{{!-- modal para confirmar si queremos eliminar el producto --}}

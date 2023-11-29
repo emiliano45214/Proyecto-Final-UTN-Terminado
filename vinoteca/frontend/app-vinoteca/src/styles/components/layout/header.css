@@ -1,0 +1,10 @@
+header{
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(74, 1, 36));  
+    display: flex;
+    justify-content: center;
+}
+header img{
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 10px;
+}
